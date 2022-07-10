@@ -1,6 +1,6 @@
 # Wrasse
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+This project is a client side calculator with the primary purpose of learning angular. The implementation choices in this app may not be best the as I am prioritzing learning as many piece of angular as possible.
 
 ## Development server
 

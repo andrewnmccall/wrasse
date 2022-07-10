@@ -1,23 +1,22 @@
-<main class="content" role="main">
-  <app-display></app-display>
-  <button>1</button>
-  <button>2</button>
-  <button>3</button>
-  <button>4</button>
-  <button>5</button>
-  <button>6</button>
-  <button>7</button>
-  <button>8</button>
-  <button>9</button>
-  <button>0</button>
-  <button>+</button>
-  <button>-</button>
-  <button>x</button>
-  <button>/</button>
-  <button>=</button>
-
-  <!-- Footer -->
-  <footer>
-
-  </footer>
-</main>
+<div class="content" role="main">
+  <div>
+    <p
+      *ngFor="let record of history"
+      [attr.data-value]="record.value"
+      [attr.data-type]="record.type"
+    >
+      {{ record.value }}
+    </p>
+  </div>
+  <input type="text" rows="1" cols="50" placeholder="type your expression here" [(ngModel)] = "input" (keyup.enter)="onRun()" />
+  <div class="button_pad">
+    <button
+      *ngFor="let dataInput of dataInputs"
+      [attr.data-value]="dataInput.value"
+      [attr.data-category]="dataInput.category"
+      (click)="appendInputValue(dataInput.value)"
+    >
+      {{ dataInput.value }}
+    </button>
+  </div>
+</div>
